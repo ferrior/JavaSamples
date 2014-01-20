@@ -1,0 +1,13 @@
+
+/**
+ * 
+ */
+import java.lang.Enum;
+
+/**
+ * @author bliu
+ *
+ */
+public enum Planet {
+
+}
