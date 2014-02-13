@@ -1,7 +1,7 @@
 *.class
 
 #eclipse metadata
-/.metadata
+.metadata/*
 
 # Package Files #
 *.jar
