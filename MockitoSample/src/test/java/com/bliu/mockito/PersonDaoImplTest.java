@@ -2,11 +2,13 @@ package com.bliu.mockito;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 
 public class PersonDaoImplTest {
 
@@ -53,6 +55,7 @@ public class PersonDaoImplTest {
 		assertEquals(a,"bbb");
 	}
 
+	
 	@Test
 	public void testAnyInt() {
 		Person person = mock(Person.class);

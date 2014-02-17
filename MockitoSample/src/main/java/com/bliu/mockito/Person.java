@@ -31,6 +31,11 @@ public class Person
         return personName;
     }
     
+    public String getPersonName(Person p)
+    {
+        return personName;
+    }
+    
     public String getPersonName(Person p, int id, PersonType type)
     {
         return personName;
