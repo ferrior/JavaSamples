@@ -42,10 +42,15 @@ public class PersonDaoImplTest {
 	public void testAnyObj() {
 		Person person = mock(Person.class);
 		dao.update(person);
-		when(person.getPersonName((Person)anyObject(), anyInt(), (PersonType)anyObject())).thenReturn("aaa");
 		Person p = dao.fetchPerson(10);
+		
+		when(person.getPersonName((Person)anyObject(), anyInt(), eq(PersonType.Big))).thenReturn("aaa");
 		String a= p.getPersonName(new Person(30,"bbb"), 10, PersonType.Big);
 		assertEquals(a,"aaa");
+		
+		when(person.getPersonName((Person)anyObject(), anyInt(), eq(PersonType.Small))).thenReturn("bbb");
+		a= p.getPersonName(new Person(30,"bbb"), 10, PersonType.Small);
+		assertEquals(a,"bbb");
 	}
 
 	@Test
